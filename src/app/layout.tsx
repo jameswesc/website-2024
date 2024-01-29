@@ -8,8 +8,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
     title: {
         template: '%s - James Gregory',
-        default:
-            'James Gregory - Software designer, founder, and amateur astronaut',
+        default: 'James Gregory - Software designer and engineer',
     },
     description: `I'm James Gregory, a software designer and engineer from
         the lands of the Gadigal People of the Eora Nation. I
