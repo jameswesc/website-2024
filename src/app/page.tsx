@@ -11,16 +11,17 @@ import {
     LinkedInIcon,
     XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+
+import logoLexx from '@/images/logos/lexx.png'
+import logoJamesWesc from '@/images/logos/james-wesc.png'
+import logoSmashDelta from '@/images/logos/smash-delta.svg'
+
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { type ArticleWithSlug, getAllArticles } from '@/lib/writing'
 import { formatDate } from '@/lib/formatDate'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -85,7 +86,7 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function Article({ article }: { article: ArticleWithSlug }) {
     return (
         <Card as="article">
-            <Card.Title href={`/articles/${article.slug}`}>
+            <Card.Title href={`/writing/${article.slug}`}>
                 {article.title}
             </Card.Title>
             <Card.Eyebrow as="time" dateTime={article.date} decorate>
@@ -188,35 +189,25 @@ function Role({ role }: { role: Role }) {
 function Resume() {
     let resume: Array<Role> = [
         {
-            company: 'Planetaria',
-            title: 'CEO',
-            logo: logoPlanetaria,
-            start: '2019',
-            end: {
-                label: 'Present',
-                dateTime: new Date().getFullYear().toString(),
-            },
+            company: 'Smash Delta',
+            title: 'Design & Engineering Lead',
+            logo: logoSmashDelta,
+            start: '2018',
+            end: '2023',
         },
         {
-            company: 'Airbnb',
-            title: 'Product Designer',
-            logo: logoAirbnb,
-            start: '2014',
-            end: '2019',
+            company: 'James Wesc',
+            title: 'Freelance Software Engineer',
+            logo: logoJamesWesc,
+            start: '2017',
+            end: '2018',
         },
         {
-            company: 'Facebook',
-            title: 'iOS Software Engineer',
-            logo: logoFacebook,
-            start: '2011',
-            end: '2014',
-        },
-        {
-            company: 'Starbucks',
-            title: 'Shift Supervisor',
-            logo: logoStarbucks,
-            start: '2008',
-            end: '2011',
+            company: 'LexX Technologies',
+            title: 'Junior Software Engineer',
+            logo: logoLexx,
+            start: '2016',
+            end: '2017',
         },
     ]
 
@@ -282,34 +273,29 @@ export default async function Home() {
             <Container className="mt-9">
                 <div className="max-w-2xl">
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                        Software designer, founder, and amateur astronaut.
+                        Software designer and engineer
                     </h1>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        I’m Spencer, a software designer and entrepreneur based
-                        in New York City. I’m the founder and CEO of Planetaria,
-                        where we develop technologies that empower regular
-                        people to explore space on their own terms.
+                        I'm James Gregory, a software designer and engineer from
+                        the lands of the Gadigal People of the Eora Nation. I
+                        create performant, accessible, and delightful web
+                        applications with data and maps.
                     </p>
                     <div className="mt-6 flex gap-6">
                         <SocialLink
-                            href="#"
-                            aria-label="Follow on X"
-                            icon={XIcon}
+                            href="https://www.linkedin.com/in/jameswesc/"
+                            aria-label="Follow on LinkedIn"
+                            icon={LinkedInIcon}
                         />
                         <SocialLink
-                            href="#"
-                            aria-label="Follow on Instagram"
-                            icon={InstagramIcon}
-                        />
-                        <SocialLink
-                            href="#"
+                            href="https://github.com/jameswesc"
                             aria-label="Follow on GitHub"
                             icon={GitHubIcon}
                         />
                         <SocialLink
-                            href="#"
-                            aria-label="Follow on LinkedIn"
-                            icon={LinkedInIcon}
+                            href="https://www.instagram.com/james.wesc/"
+                            aria-label="Follow on Instagram"
+                            icon={InstagramIcon}
                         />
                     </div>
                 </div>
@@ -323,7 +309,7 @@ export default async function Home() {
                         ))}
                     </div>
                     <div className="space-y-10 lg:pl-16 xl:pl-24">
-                        <Newsletter />
+                        {/* <Newsletter /> */}
                         <Resume />
                     </div>
                 </div>
