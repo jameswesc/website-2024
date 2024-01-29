@@ -8,7 +8,7 @@ import {
     GitHubIcon,
     InstagramIcon,
     LinkedInIcon,
-    XIcon,
+    YoutubeIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpeg'
 
@@ -125,6 +125,13 @@ export default function About() {
                             className="mt-4"
                         >
                             Follow on Instagram
+                        </SocialLink>
+                        <SocialLink
+                            href="https://www.youtube.com/@jameswesc"
+                            icon={YoutubeIcon}
+                            className="mt-4"
+                        >
+                            Follow on YouTube
                         </SocialLink>
                         <SocialLink
                             href="mailto:james@jameswesc.com"
