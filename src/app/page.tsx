@@ -16,6 +16,9 @@ import logoLexx from '@/images/logos/lexx.png'
 import logoJamesWesc from '@/images/logos/james-wesc.png'
 import logoSmashDelta from '@/images/logos/smash-delta.svg'
 
+import logoUNSW from '@/images/logos/unsw.svg'
+import logoUTAS from '@/images/logos/utas.svg'
+
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -65,6 +68,27 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
             <path
                 d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
                 className="stroke-zinc-400 dark:stroke-zinc-500"
+            />
+        </svg>
+    )
+}
+
+function AcademicCapIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+    return (
+        <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+            {...props}
+        >
+            <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+                className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
             />
         </svg>
     )
@@ -211,6 +235,33 @@ function Resume() {
         },
     ]
 
+    let education: Array<Role> = [
+        {
+            company: 'Master of Environmental Geospatial Science',
+            title: 'University of Tasmania',
+            logo: logoUTAS,
+            start: '2024',
+            end: {
+                label: 'Present',
+                dateTime: new Date().getFullYear().toString(),
+            },
+        },
+        {
+            company: 'Graduate Certificate in Interaction Design',
+            title: 'University of New South Wales',
+            logo: logoUNSW,
+            start: '2018',
+            end: '2018',
+        },
+        {
+            company: 'Bachelor of Computer Science',
+            title: 'University of New South Wales',
+            logo: logoUNSW,
+            start: '2009',
+            end: '2014',
+        },
+    ]
+
     return (
         <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -219,6 +270,15 @@ function Resume() {
             </h2>
             <ol className="mt-6 space-y-4">
                 {resume.map((role, roleIndex) => (
+                    <Role key={roleIndex} role={role} />
+                ))}
+            </ol>
+            <h2 className="mt-8 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                <AcademicCapIcon className="h-6 w-6 flex-none" />
+                <span className="ml-3">Education</span>
+            </h2>
+            <ol className="mt-6 space-y-4">
+                {education.map((role, roleIndex) => (
                     <Role key={roleIndex} role={role} />
                 ))}
             </ol>
