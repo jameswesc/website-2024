@@ -17,7 +17,7 @@ import logoJamesWesc from '@/images/logos/james-wesc.png'
 import logoSmashDelta from '@/images/logos/smash-delta.svg'
 
 import logoUNSW from '@/images/logos/unsw.svg'
-import logoUTAS from '@/images/logos/utas.svg'
+// import logoUTAS from '@/images/logos/utas.svg'
 
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -236,16 +236,6 @@ function Resume() {
     ]
 
     let education: Array<Role> = [
-        {
-            company: 'Master of Environmental Geospatial Science',
-            title: 'University of Tasmania',
-            logo: logoUTAS,
-            start: '2024',
-            end: {
-                label: 'Present',
-                dateTime: new Date().getFullYear().toString(),
-            },
-        },
         {
             company: 'Graduate Certificate in Interaction Design',
             title: 'University of New South Wales',
