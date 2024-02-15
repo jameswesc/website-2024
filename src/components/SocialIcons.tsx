@@ -30,7 +30,7 @@ export function LinkedInIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export function YoutubeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     return (
         <svg
-            stroke-width="0"
+            strokeWidth="0"
             viewBox="0 0 576 512"
             aria-hidden="true"
             {...props}

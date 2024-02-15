@@ -49,8 +49,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
     title: 'About',
-    description:
-        'I’m James Gregory. I live in New York City, where I design the future.',
+    description: 'I’m James Gregory, software engineer for social good',
 }
 
 export default function About() {
@@ -61,7 +60,7 @@ export default function About() {
                     <div className="max-w-xs px-2.5 lg:max-w-none">
                         <Image
                             src={portraitImage}
-                            alt=""
+                            alt="Photo of James Gregory in a white and floral jumpsuit."
                             sizes="(min-width: 1024px) 32rem, 20rem"
                             className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
                         />
@@ -69,36 +68,35 @@ export default function About() {
                 </div>
                 <div className="lg:order-first lg:row-span-2">
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                        I’m James Gregory.
+                        James Gregory, <br />
+                        software engineer for social good
                     </h1>
                     <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                         <p>
-                            Id anim qui esse quis veniam. Commodo minim
-                            excepteur non voluptate tempor ut ut eiusmod
-                            reprehenderit commodo consequat sint nisi. Duis
-                            proident est commodo exercitation nostrud deserunt
-                            dolore ex in sit magna deserunt. Cillum pariatur
-                            laborum nisi sit nisi duis deserunt sint mollit
-                            commodo officia reprehenderit.
+                            Hi, I'm James, and I'm a software engineer trying to
+                            have a positive impact on the world. I come from and
+                            live on the lands of the Gadigal people of the Eora
+                            Nation, also known as Sydney, Australia.
                         </p>
                         <p>
-                            Exercitation ipsum eiusmod quis quis enim. Qui
-                            fugiat nulla nulla proident ullamco in nulla commodo
-                            in occaecat aliquip esse. Veniam exercitation sunt
-                            commodo fugiat ullamco do amet ex deserunt. Laboris
-                            eu ex id anim officia est sit anim velit eu esse id
-                            commodo culpa. Anim ut laboris adipisicing sunt
-                            aute.
+                            I'm passionate about creating custom software and
+                            leveraging open-source technologies to create
+                            positive social and environmental value. I'm
+                            particularly interested in how performant and
+                            beautiful data-driven web applications can be used
+                            to better make sense of the world.
                         </p>
                         <p>
-                            Minim elit elit irure incididunt ad ullamco esse
-                            reprehenderit labore qui amet. Cillum magna anim
-                            aliquip reprehenderit. Cillum fugiat aliquip est id
-                            in ad amet duis dolor. Incididunt occaecat in
-                            laboris adipisicing aliquip amet cillum aute anim
-                            consectetur pariatur adipisicing id ad. Veniam
-                            exercitation id qui ut ad non non do veniam veniam
-                            laboris aute magna.
+                            When I'm not a tapping on keyboard I enjoy playing
+                            squash, good food with friends, live music, and
+                            disconnecting in nature and re-discovering that it
+                            doesn't really matter which f**king blazingly-fast
+                            javascript framework you use. Sometimes, I like to
+                            tap at the keyboard for fun and make{' '}
+                            <Link className="underline" href="/creative">
+                                generative art
+                            </Link>
+                            .
                         </p>
                     </div>
                 </div>
