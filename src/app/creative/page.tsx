@@ -36,6 +36,26 @@ const videos: VideoData[] = [
     },
 ]
 
+type SketchData = {
+    title: string
+    url: string
+}
+
+const sketches: SketchData[] = [
+    {
+        title: 'Code sketches in react and react three fiber',
+        url: 'https://code-sketches-react.vercel.app/',
+    },
+    {
+        title: 'CS 231129',
+        url: 'https://cs-231129.vercel.app/',
+    },
+    {
+        title: 'CS 231125',
+        url: 'https://cs-231115.vercel.app/',
+    },
+]
+
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     return (
         <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -47,7 +67,7 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     )
 }
 
-export default function Projects() {
+export default function Creative() {
     return (
         <>
             <SimpleLayout
@@ -75,6 +95,23 @@ export default function Projects() {
                                 <LinkIcon className="h-6 w-6 flex-none" />
                                 <span className="ml-2">youtube.com</span>
                             </p>
+                        </Card>
+                    ))}
+                </ul>
+            </SimpleLayout>
+            <SimpleLayout
+                title="Code Sketches"
+                intro="Generative art and creative coding sketches"
+            >
+                <ul
+                    role="list"
+                    className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+                >
+                    {sketches.map(({ title, url }, i) => (
+                        <Card as="li" key={i}>
+                            <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                                <Card.Link href={url}>{title}</Card.Link>
+                            </h2>
                         </Card>
                     ))}
                 </ul>
