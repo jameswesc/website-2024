@@ -99,7 +99,7 @@ export default function Creative() {
                     ))}
                 </ul>
             </SimpleLayout>
-            <SimpleLayout
+            {/* <SimpleLayout
                 title="Code Sketches"
                 intro="Generative art and creative coding sketches"
             >
@@ -115,7 +115,7 @@ export default function Creative() {
                         </Card>
                     ))}
                 </ul>
-            </SimpleLayout>
+            </SimpleLayout> */}
         </>
     )
 }

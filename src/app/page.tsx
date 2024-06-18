@@ -17,7 +17,7 @@ import logoJamesWesc from '@/images/logos/james-wesc.png'
 import logoSmashDelta from '@/images/logos/smash-delta.svg'
 
 import logoUNSW from '@/images/logos/unsw.svg'
-// import logoUTAS from '@/images/logos/utas.svg'
+import logoUTAS from '@/images/logos/utas.svg'
 
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -237,6 +237,16 @@ function Resume() {
 
     let education: Array<Role> = [
         {
+            company: 'Master of Environmental Geospatial Science',
+            title: 'University of Tasmania',
+            logo: logoUTAS,
+            start: '2024',
+            end: {
+                label: 'Present',
+                dateTime: new Date().getFullYear().toString(),
+            },
+        },
+        {
             company: 'Graduate Certificate in Interaction Design',
             title: 'University of New South Wales',
             logo: logoUNSW,
@@ -272,10 +282,10 @@ function Resume() {
                     <Role key={roleIndex} role={role} />
                 ))}
             </ol>
-            <Button href="#" variant="secondary" className="group mt-6 w-full">
+            {/* <Button href="#" variant="secondary" className="group mt-6 w-full">
                 Download CV
                 <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-            </Button>
+            </Button> */}
         </div>
     )
 }
@@ -323,13 +333,15 @@ export default async function Home() {
             <Container className="mt-9">
                 <div className="max-w-2xl">
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                        Software designer and engineer
+                        Environmental Spatial Engineer
                     </h1>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        I'm James Gregory, a software designer and engineer from
-                        the lands of the Gadigal People of the Eora Nation. I
-                        create performant, accessible, and delightful web
-                        applications with data and maps.
+                        Hi 👋 <br />
+                        I'm James Gregory, an environmental spatial data
+                        scientist focusing on how I can best apply my experience
+                        in software enginering and design to ennvironmental
+                        geospatial science. Currently based in
+                        Lutruwita/Tasmania.
                     </p>
                     <div className="mt-6 flex gap-6">
                         <SocialLink

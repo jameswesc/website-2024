@@ -69,30 +69,33 @@ export default function About() {
                 <div className="lg:order-first lg:row-span-2">
                     <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                         James Gregory, <br />
-                        software engineer for social good
+                        environmental spatial Scientist
                     </h1>
                     <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                         <p>
-                            Hi, I'm James, and I'm a software engineer trying to
-                            have a positive impact on the world. I come from and
-                            live on the lands of the Gadigal people of the Eora
-                            Nation, also known as Sydney, Australia.
+                            I'm James Gregory, an environmental spatial data
+                            scientist focusing on how I can best apply my
+                            experience in software enginering and design to
+                            ennvironmental geospatial science. Originally from
+                            Warrane/Sydney, I've recently moved to
+                            Lutruwita/Tasmania.
                         </p>
                         <p>
-                            I'm passionate about creating custom software and
-                            leveraging open-source technologies to create
-                            positive social and environmental value. I'm
-                            particularly interested in how performant and
-                            beautiful data-driven web applications can be used
-                            to better make sense of the world.
+                            From 2008 to 2023 I led the Design and Engineering
+                            team at{' '}
+                            <a href="https://smashdelta.com/">Smash Delta</a>,
+                            an Australian based data strategy consulting firm.
+                            During this time I specialised in creating web
+                            applications for data visualisation, 3D
+                            visualisation and maps. Recently, I've been focusing
+                            on geospatial by studying a Masters of Environmental
+                            Geospatial Science at the University of Tasmania.
                         </p>
                         <p>
                             When I'm not a tapping on keyboard I enjoy playing
                             squash, good food with friends, live music, and
-                            disconnecting in nature and re-discovering that it
-                            doesn't really matter which f**king blazingly-fast
-                            javascript framework you use. Sometimes, I like to
-                            tap at the keyboard for fun and make{' '}
+                            disconnecting in nature. Sometimes, I like to tap at
+                            the keyboard for fun and make{' '}
                             <Link className="underline" href="/creative">
                                 generative art
                             </Link>
@@ -107,7 +110,7 @@ export default function About() {
                             icon={LinkedInIcon}
                             className="mt-4"
                         >
-                            Follow on LinkedIn
+                            LinkedIn
                         </SocialLink>
 
                         <SocialLink
@@ -115,21 +118,21 @@ export default function About() {
                             icon={GitHubIcon}
                             className="mt-4"
                         >
-                            Follow on GitHub
+                            GitHub
                         </SocialLink>
                         <SocialLink
                             href="https://www.instagram.com/james.wesc/"
                             icon={InstagramIcon}
                             className="mt-4"
                         >
-                            Follow on Instagram
+                            Instagram
                         </SocialLink>
                         <SocialLink
                             href="https://www.youtube.com/@jameswesc"
                             icon={YoutubeIcon}
                             className="mt-4"
                         >
-                            Follow on YouTube
+                            YouTube
                         </SocialLink>
                         <SocialLink
                             href="mailto:james@jameswesc.com"
